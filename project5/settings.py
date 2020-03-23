@@ -73,6 +73,14 @@ WSGI_APPLICATION = 'project5.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pyflakes',
+    'django_jenkins.tasks.run_jslint',
+    'django_jenkins.tasks.run_csslint',
+    'django_jenkins.tasks.run_sloccount'
+)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
